@@ -50,7 +50,9 @@ class MainActivity : Activity() {
         mulButton.setOnClickListener { compute(Calculator.Operator.MUL) }
 
         val resetButton = findViewById(R.id.reset_btn) as Button
-        resetButton.setOnClickListener { mCalculator!!.setValue(0.0) }
+        resetButton.setOnClickListener { mCalculator!!.setValue(0.0)
+                                        mResultTextView!!.text = "0.0"
+        }
     }
 
 
